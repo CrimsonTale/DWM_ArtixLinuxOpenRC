@@ -28,6 +28,7 @@ static const Rule rules[] = {
 	 */
 	/* class     instance  title           tags mask  isfloating  isfakefullscreen  isterminal  noswallow  monitor */
 	{ "Gimp",    NULL,     NULL,           0,         1,          0,	   			0,           0,        -1 },
+	{ "Firefox", NULL,     NULL,     0,	      0,          1,				0,          -1,        -1 },
 	{ "Google-chrome", NULL,     NULL,     0,	      0,          1,				0,          -1,        -1 },
 	{ "st-256color",      NULL,     NULL,  0,         0,          0,				1,           0,        -1 },
 	{ NULL,      NULL,     "Event Tester", 0,         0,          0,           1,        -1 }, /* xev */
@@ -94,12 +95,13 @@ static Key keys[] = {
 	{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
-	{ MODKEY,                       XK_n,      shiftview,     {.i = +1 } },
-	{ MODKEY,                       XK_b,      shiftview,     {.i = -1 } },
+	{ MODKEY,                       XK_n,      shiftview,      {.i = +1 } },
+	{ MODKEY,                       XK_b,      shiftview,      {.i = -1 } },
 	{ MODKEY,                       XK_minus,  setgaps,        {.i = -5 } },
 	{ MODKEY,                       XK_equal,  setgaps,        {.i = +5 } },
 	{ MODKEY|ShiftMask,             XK_minus,  setgaps,        {.i = GAP_RESET } },
 	{ MODKEY|ShiftMask,             XK_equal,  setgaps,        {.i = GAP_TOGGLE} },
+	{ MODKEY,						XK_w,	   spawn,		   SHCMD("google-chrome-stable") },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
