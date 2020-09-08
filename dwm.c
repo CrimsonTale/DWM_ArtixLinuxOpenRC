@@ -263,6 +263,9 @@ static void centeredmaster(Monitor *m);
 static void centeredfloatingmaster(Monitor *m);
 static void bstack(Monitor *m);
 static void bstackhoriz(Monitor *m);
+static void spiral(Monitor *m);
+static void dwindle(Monitor *m);
+
 
 static pid_t getparentprocess(pid_t p);
 static int isdescprocess(pid_t p, pid_t c);
