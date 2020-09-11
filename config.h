@@ -30,7 +30,6 @@ static const Rule rules[] = {
 	{ "Gimp",    NULL,     NULL,           0,         1,          0,	   			0,           0,        -1,	 		0  },
 	{ "Firefox", NULL,     NULL,      	   0,	      0,          1,				0,          -1,        -1,	 		0  },
 	{ "Google-chrome", NULL,     NULL,     0,	      0,          1,				0,          -1,        -1,	 		0  },
-	{ "kitty",      NULL,     NULL,  0,         0,          0,				1,           0,        -1,	 		0  },
 	{ "st-256color",      NULL,     NULL,  0,         0,          0,				1,           0,        -1,	 		0  },
 	{ NULL,       NULL,   "scratchpad",    0,         1,          0,	   			0,           0,        -1,	 	   's' },
 	{ NULL,      NULL,     "Event Tester", 0,         0,          0,           1,        -1 }, /* xev */
@@ -68,7 +67,7 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
-static const char *termcmd[]  = { "kitty", NULL };
+static const char *termcmd[]  = { "st", NULL };
 static const char *upvol[]   = { "/usr/bin/pactl", "set-sink-volume", "0", "+5%",     NULL };
 static const char *downvol[] = { "/usr/bin/pactl", "set-sink-volume", "0", "-5%",     NULL };
 static const char *mutevol[] = { "/usr/bin/pactl", "set-sink-mute",   "0", "toggle",  NULL };
