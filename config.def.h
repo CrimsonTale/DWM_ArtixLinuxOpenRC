@@ -4,6 +4,7 @@
 static const unsigned int borderpx  = 7;        /* border pixel of windows */
 static const Gap default_gap        = {.isgap = 1, .realgap = 10, .gappx = 10};
 static const unsigned int snap      = 32;       /* snap pixel */
+static const unsigned int minwsz    = 20;       /* Minimal heigt of a client for smfact */
 static const int swallowfloating    = 0;        /* 1 means swallow floating windows by default */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
@@ -37,6 +38,7 @@ static const Rule rules[] = {
 
 /* layout(s) */
 static const float mfact     = 0.55; /* factor of master area size [0.05..0.95] */
+static const float smfact     = 0.00; /* factor of tiled clients [0.00..0.95] */
 static const int nmaster     = 1;    /* number of clients in master area */
 static const int resizehints = 1;    /* 1 means respect size hints in tiled resizals */
 
@@ -90,6 +92,8 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_d,      incnmaster,     {.i = -1 } },
 	{ MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
 	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
+	{ MODKEY|ShiftMask,             XK_h,      setsmfact,      {.f = +0.05} },
+	{ MODKEY|ShiftMask,             XK_l,      setsmfact,      {.f = -0.05} },
 	{ MODKEY|ShiftMask,             XK_j,      movestack,      {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_k,      movestack,      {.i = -1 } },
 	{ MODKEY,                       XK_Return, zoom,           {0} },
