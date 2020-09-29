@@ -28,12 +28,12 @@ static const Rule rules[] = {
 	 *	WM_NAME(STRING) = title
 	 */
 	/* class     instance  title           tags mask  isfloating  isfakefullscreen  isterminal  noswallow  monitor scratch key*/
-	{ "Gimp",    NULL,     NULL,           0,         1,          0,	   			0,           0,        -1,	 		0  },
-	{ "Firefox", NULL,     NULL,      	   0,	      0,          1,				0,          -1,        -1,	 		0  },
-	{ "Google-chrome", NULL,     NULL,     0,	      0,          1,				0,          -1,        -1,	 		0  },
-	{ "st-256color",      NULL,     NULL,  0,         0,          0,				1,           0,        -1,	 		0  },
-	{ NULL,       NULL,   "scratchpad",    0,         1,          0,	   			0,           0,        -1,	 	   's' },
-	{ NULL,      NULL,     "Event Tester", 0,         0,          0,           1,        -1 }, /* xev */
+	{ "Gimp",    NULL,     NULL,           0,         1,          0,	   		0,           0,        -1,	 		0  },
+	{ "Firefox", NULL,     NULL,      	   0,	        0,          1,				0,          -1,        -1,	 		0  },
+	{ "Google-chrome", NULL,     NULL,     0,	        0,          1,				0,          -1,        -1,	 		0  },
+	{ "St-256color",      NULL,     NULL,  0,         0,          0,				1,           0,        -1,	 		0  },
+	{ "Alacritty",      NULL,     NULL,    0,         0,          0,				1,           0,        -1,	 		0  },
+	{ NULL,       NULL,   "scratchpad",    0,         1,          0,	   		1,           0,        -1,	 	   's' },
 };
 
 /* layout(s) */
